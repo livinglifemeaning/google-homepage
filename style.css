@@ -1,0 +1,250 @@
+
+/* Style Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of Style Reset */
+
+/* .main_content{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+	flex-shrink: 0px;
+	margin: 10em;
+	flex-wrap: nowrap;
+}
+
+
+.search_box {
+	background: #fff;
+	border: 1px solid #dfe1e5;
+	box-shadow: none;
+	border-radius: 24px;
+	z-index: 3;
+	height: 44px;
+	margin: 0 auto;
+	width: 582px;
+}
+
+input {
+	-webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    -webkit-rtl-ordering: logical;
+				cursor: text;
+				font: 16px arial,sans-serif;
+    line-height: 34px;
+    height: 34px !important;
+}
+.search_box:hover {
+	box-shadow: 0 1px 6px 0 rgba(32,33, 36, 0, 28);
+	border-color: rgba (233, 225, 229, 0);
+}
+.search_box:focus {
+	outline: none;
+}
+
+ */
+
+.main_content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+	margin-top: 89px;
+	padding-bottom: 18px;
+}
+.logo {
+ width: 272px; 
+ height: 92px;
+}
+
+.bar {
+  margin:0 auto;
+  width:575px;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+}
+
+.bar:hover {
+	box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus {
+  outline: none;
+}
+.searchbar{
+	height:45px;
+  border:none;
+		width:500px;
+		margin-left: 30px;
+		border-radius:30px;
+  font-size:16px;
+		outline: none;
+		
+}
+.voice {
+	height:20px;
+	position: relative;
+	top: 5px;
+	}
+		
+.buttons {
+  flex: 0 0 145px;
+  margin: 20px;
+}
+
+#button {
+  backage-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  color: #5f6368;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* This toggles the element when it is clicked */
+#button:focus {
+  border: 1px solid #4d90fe;
+  outline: none;
+}
