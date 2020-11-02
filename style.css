@@ -1,4 +1,3 @@
-
 /* Style Reset */
 html,
 body,
@@ -126,56 +125,85 @@ table {
 }
 /* End of Style Reset */
 
-/* .main_content{
- display: flex;
- flex-direction: column;
- align-items: center;
-	flex-shrink: 0px;
-	margin: 10em;
-	flex-wrap: nowrap;
+/* Use Grid to make Header and Footer together */
+.web_page {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    "header header header"
+    "content content content"
+    "footer footer footer";
 }
 
-
-.search_box {
-	background: #fff;
-	border: 1px solid #dfe1e5;
-	box-shadow: none;
-	border-radius: 24px;
-	z-index: 3;
-	height: 44px;
-	margin: 0 auto;
-	width: 582px;
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 100%;
+  margin: 20px 20px;
 }
-
-input {
-	-webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: -internal-light-dark(black, white);
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: textfield;
-    -webkit-rtl-ordering: logical;
-				cursor: text;
-				font: 16px arial,sans-serif;
-    line-height: 34px;
-    height: 34px !important;
+#nav_links {
+  white-space: nowrap;
+  padding-left: 15px;
+  display: inline-block;
 }
-.search_box:hover {
-	box-shadow: 0 1px 6px 0 rgba(32,33, 36, 0, 28);
-	border-color: rgba (233, 225, 229, 0);
+#nav_links_style {
+  color: #000;
+  opacity: 0.75;
+  text-decoration: none;
+  font-family: arial, sans-seriff;
+  cursor: pointer;
+  font-size: 13px;
 }
-.search_box:focus {
-	outline: none;
+#nav_links_style:hover {
+  text-decoration: underline;
 }
-
- */
-
+.store{
+  margin-right: auto;
+}
+.gmail {
+  margin-left: auto;
+}
+.app-icon {
+  height: 30px;
+  width: 30px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.app-icon:hover {
+  opacity: 1;
+}
+#sign-in {
+  color: #fff;
+  cursor: deault;
+  text-decoration: none;
+  border: 1px solid #4285f4;
+  font-weight: bold;
+  outline: none;
+  background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;
+  font-family: arial, sans-serif;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 13px;
+  margin-right: 50px;
+}
+#sign-in:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+/* End of Header + Footer */
+/* Center of Web Page */
 .main_content {
+  grid-area: content;
+  align-self: center;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -183,43 +211,42 @@ input {
 }
 
 .image {
-	margin-top: 89px;
-	padding-bottom: 18px;
+  margin-top: 89px;
+  padding-bottom: 18px;
 }
 .logo {
- width: 272px; 
- height: 92px;
+  width: 272px;
+  height: 92px;
 }
 
 .bar {
-  margin:0 auto;
-  width:575px;
-  border-radius:30px;
-  border:1px solid #dcdcdc;
+  margin: 0 auto;
+  width: 575px;
+  border-radius: 30px;
+  border: 1px solid #dcdcdc;
 }
 
 .bar:hover {
-	box-shadow: 1px 1px 8px 1px #dcdcdc;
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
 }
 .bar:focus {
   outline: none;
 }
-.searchbar{
-	height:45px;
-  border:none;
-		width:500px;
-		margin-left: 30px;
-		border-radius:30px;
-  font-size:16px;
-		outline: none;
-		
+.searchbar {
+  height: 45px;
+  border: none;
+  width: 500px;
+  margin-left: 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
 }
 .voice {
-	height:20px;
-	position: relative;
-	top: 5px;
-	}
-		
+  height: 20px;
+  position: relative;
+  top: 5px;
+}
+
 .buttons {
   flex: 0 0 145px;
   margin: 20px;
@@ -248,3 +275,49 @@ input {
   border: 1px solid #4d90fe;
   outline: none;
 }
+
+/* End of Center of Web Page */
+
+/* Beginning of Footer */
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: nowrap;
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  bottom: 0px;
+  position: absolute;
+  line-height: 40px;
+  min-width: 980px;
+  left: 0;
+  right: 0;
+  font-size: 10pt;
+}
+#footer_links {
+  white-space: nowrap;
+  padding-left: 27px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+  visibility: visible;
+}
+#footer_links_style {
+  color: #5f6368;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+}
+#footer_links_style:hover {
+  text-decoration: underline;
+}
+.privacy {
+  margin-left: auto;
+}
+.settings {
+  margin-right: 27px;
+}
+/* End of Footer */
