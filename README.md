@@ -1,1 +1,2 @@
 In this project, I am trying to to clone Google's homepage.
+First I tried by myself by using the inspect button. It was a mess but I figured it out kind of. The second time I followed a tutorial done by someone a little further down the line then me which helped in understanding grid! I like grid a lot I just need to get better at using it Insha Allah. All in all a fun project. I like adding hover properties lol.
